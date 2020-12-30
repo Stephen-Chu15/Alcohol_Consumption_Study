@@ -33,3 +33,9 @@ SELECT age, COUNT(school), ROUND(AVG(free_time), 2) as "Average Free Time", ROUN
 FROM gp_study_habits
 GROUP BY age
 ORDER BY age DESC;
+
+-- Calculate the average amount of free time spent and outings attended by MS per age group
+SELECT age, COUNT(school), ROUND(AVG(free_time), 2) as "Average Free Time", ROUND(AVG(outings), 2) AS "Average Outings Attended"
+FROM ms_study_habits
+GROUP BY age
+ORDER BY age DESC;
