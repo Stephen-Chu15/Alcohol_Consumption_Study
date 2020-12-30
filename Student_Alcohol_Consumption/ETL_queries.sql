@@ -22,3 +22,8 @@ ORDER BY age DESC;
 SELECT COUNT(school) AS "Total Students", school_support, SUM(failure_count) AS "Total Failure Count", ROUND(AVG(weekly_study_time), 2) AS "Weekly Study Time"
 FROM gp_study_habits
 GROUP BY school_support;
+
+-- Calculate  the total failure count and weekly study time by those who received extra school support from MS
+SELECT COUNT(school) AS "Total Students", school_support, SUM(failure_count) AS "Total Failure Count", ROUND(AVG(weekly_study_time), 2) AS "Weekly Study Time"
+FROM ms_study_habits
+GROUP BY school_support;
