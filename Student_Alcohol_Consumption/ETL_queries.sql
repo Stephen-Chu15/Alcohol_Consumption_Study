@@ -11,3 +11,9 @@ SELECT age, COUNT(school) AS "Total Students", ROUND(AVG(absences) , 2) AS "Aver
 FROM female_study_habits
 GROUP BY age
 ORDER BY age DESC;
+
+-- Calculate average absences for males by age
+SELECT age, COUNT(school) AS "Total Students", ROUND(AVG(absences) , 2) AS "Average Absences"
+FROM male_study_habits
+GROUP BY age
+ORDER BY age DESC;
