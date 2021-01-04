@@ -1,4 +1,4 @@
-# Alcohol_Consumption_Study
+# Alcohol Consumption Study
 
 PROJECT PROPOSAL
 
