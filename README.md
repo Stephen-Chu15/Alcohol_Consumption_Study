@@ -8,6 +8,8 @@ EXTRACT
 
 We sourced our dataset on Kaggle.com from UCI Machine Learning that looked at Student Alcohol Consumption surveying students in math and Portugese language courses in a secondary school (https://www.kaggle.com/uciml/student-alcohol-consumption). The original data was formatted as CSV files. After extracting the data and importing the CSV files into a jupyter notebook that housed both datasets, we used pandas as a dependecy to transform the data. 
 
+![](images/site.jpg)
+
 TRANSFORM
 
 From 33 columns that observed various social, gender, and study information, we transformed the data by creating a new dataframe using only specific columns (school’,‘sex’, ‘age’,‘studytime’,‘failures’,‘schoolsup’,‘freetime’,‘goout’,‘Dalc’,‘Walc’,‘absences’).
@@ -20,6 +22,8 @@ By using the loc function, we were able to filter the data and return dataframes
 
 Outer merges were performed in order to find the data on which sex’s studies were affected more by alcohol consumption as well as how the individual schools performances were affected by alcohol consumption.
 
+![](images/etl.jpg)
+
 LOAD
 
 Creating a connection string and engine in jupyter, we loaded all joined databases (female_study_habits, male_study_habits, GP_study_habits, MS_study_habits), into SQL
@@ -27,3 +31,5 @@ Creating a connection string and engine in jupyter, we loaded all joined databas
 DATA ANALYSIS
 
 In total, 8 queries were ran in order to show what kind of analysis can be performed in SQL based off of the tables that were loaded. The first two queries were used to calculate average drinking throughout the week for both sexes in order to see the differences between them. Then, we ran queries in order to calculate how drinking affected the average amount of absences for each sex based on their age group. Once we finished the queries to examine sexes, we then ran queries to calculate total failures based on weekly study time and extra school support received by schools. Finally, the last group of queries showed how much free time and outings the school’s population had by age group.
+
+![](images/sql.jpg)
